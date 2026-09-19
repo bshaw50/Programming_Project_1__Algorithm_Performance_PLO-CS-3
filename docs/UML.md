@@ -4,9 +4,16 @@ This is the initial UML design for the project. More details and class relations
 
 ```mermaid
 classDiagram
+    class ExperimentDriver
+    class PermutationGenerator
     class MergeSort
     class QuickSort
     class ShakerSort
     class HeapSort
-    class PermutationGenerator
+
+    ExperimentDriver --> PermutationGenerator : uses
+    ExperimentDriver --> MergeSort : runs
+    ExperimentDriver --> QuickSort : runs
+    ExperimentDriver --> ShakerSort : runs
+    ExperimentDriver --> HeapSort : runs
 ```
